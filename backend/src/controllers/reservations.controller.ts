@@ -97,7 +97,8 @@ export const getReservations = async (req: Request, res: Response) => {
        WHERE r.user_id = $1`,
       [user.id]
     );
-    res.json(rows);
+    const sorted = rows.sort((a, b) => new Date(a.reservation_at).getTime() - new Date(b.reservation_at).getTime());
+    res.json(sorted);
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: 'Server error' });
