@@ -25,6 +25,7 @@ const LoginPage: React.FC = () => {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
+          width: '70%'
         }}
       />
 
@@ -36,7 +37,7 @@ const LoginPage: React.FC = () => {
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
-          p: 4,
+          p: 5,
         }}
       >
         <Typography variant="h2" component="h1" gutterBottom sx={{ textAlign: 'center' }}>
